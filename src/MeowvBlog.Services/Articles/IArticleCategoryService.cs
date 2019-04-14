@@ -1,9 +1,9 @@
 ﻿namespace MeowvBlog.Services.Articles
 {
     /// <summary>
-    /// 文章服务接口
+    /// 文章对应分类服务接口
     /// </summary>
-    public class IArticleService
+    public interface IArticleCategoryService
     {
 
     }

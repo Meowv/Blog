@@ -1,9 +1,9 @@
 ﻿namespace MeowvBlog.Services.Articles
 {
     /// <summary>
-    /// 文章服务接口
+    /// 文章对应标签服务接口
     /// </summary>
-    public class IArticleService
+    public interface IArticleTagService
     {
 
     }
