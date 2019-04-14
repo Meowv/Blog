@@ -5,11 +5,11 @@ using static MeowvBlog.EntityFramework.MeowvBlogDbConsts;
 
 namespace MeowvBlog.EntityFramework.Mappers.Articles
 {
-    public class ArticleMapper : IEntityTypeConfiguration<Article>
+    public class ArticleTagMapper : IEntityTypeConfiguration<ArticleTag>
     {
-        public void Configure(EntityTypeBuilder<Article> builder)
+        public void Configure(EntityTypeBuilder<ArticleTag> builder)
         {
-            builder.ToTable(DbTableName.Articles);
+            builder.ToTable(DbTableName.ArticleTags);
             builder.HasKey(x => x.Id);
         }
     }
