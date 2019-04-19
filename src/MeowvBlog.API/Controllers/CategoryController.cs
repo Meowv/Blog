@@ -1,5 +1,5 @@
-﻿using MeowvBlog.Services.Articles;
-using MeowvBlog.Services.Dto.Articles.Params;
+﻿using MeowvBlog.Services.Categories;
+using MeowvBlog.Services.Dto.Categories.Params;
 using MeowvBlog.Services.Dto.Common;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -9,30 +9,30 @@ using UPrime.WebApi;
 namespace MeowvBlog.API.Controllers
 {
     /// <summary>
-    /// 文章相关API
+    /// 分类相关API
     /// </summary>
-    [Route("Article")]
-    public class ArticleController : ApiControllerBase
+    [Route("Category")]
+    public class CategoryController : ApiControllerBase
     {
-        private readonly IArticleService _articleService;
+        private readonly ICategoryService _categoryService;
 
-        public ArticleController()
+        public CategoryController()
         {
-            _articleService = UPrimeEngine.Instance.Resolve<IArticleService>();
+            _categoryService = UPrimeEngine.Instance.Resolve<ICategoryService>();
         }
 
         /// <summary>
-        /// 新增文章
+        /// 新增分类
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
         [HttpPost]
         [Route("Insert")]
-        public async Task<UPrimeResponse> Insert([FromBody] InsertArticleInput input)
+        public async Task<UPrimeResponse> Insert([FromBody] InsertCategoryInput input)
         {
             var response = new UPrimeResponse<string>();
 
-            var result = await _articleService.InsertAsync(input);
+            var result = await _categoryService.InsertAsync(input);
             if (!result.Success)
                 response.SetMessage(UPrimeResponseStatusCode.Error, result.GetErrorMessage());
             else
@@ -42,17 +42,17 @@ namespace MeowvBlog.API.Controllers
         }
 
         /// <summary>
-        /// 更新文章
+        /// 更新分类
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
         [HttpPost]
         [Route("Update")]
-        public async Task<UPrimeResponse> Update([FromBody] UpdateArticleInput input)
+        public async Task<UPrimeResponse> Update([FromBody] UpdateCategoryInput input)
         {
             var response = new UPrimeResponse<string>();
 
-            var result = await _articleService.UpdateAsync(input);
+            var result = await _categoryService.UpdateAsync(input);
             if (!result.Success)
                 response.SetMessage(UPrimeResponseStatusCode.Error, result.GetErrorMessage());
             else
@@ -62,7 +62,7 @@ namespace MeowvBlog.API.Controllers
         }
 
         /// <summary>
-        /// 删除文章
+        /// 删除分类
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
@@ -72,7 +72,7 @@ namespace MeowvBlog.API.Controllers
         {
             var response = new UPrimeResponse<string>();
 
-            var result = await _articleService.DeleteAsync(input);
+            var result = await _categoryService.DeleteAsync(input);
 
             if (!result.Success)
                 response.SetMessage(UPrimeResponseStatusCode.Error, result.GetErrorMessage());
