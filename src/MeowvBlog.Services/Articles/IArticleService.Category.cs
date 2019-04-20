@@ -6,22 +6,22 @@ using UPrime;
 namespace MeowvBlog.Services.Articles
 {
     /// <summary>
-    /// 文章对应的标签服务接口
+    /// 文章对应的分类服务接口
     /// </summary>
     public partial interface IArticleService
     {
         /// <summary>
-        /// 新增文章对应的标签
+        /// 新增文章对应的分类
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task<ActionOutput<string>> InsertArticleTagAsync(InsertArticleTagInput input);
+        Task<ActionOutput<string>> InsertArticleCategoryAsync(InsertArticleCategoryInput input);
 
         /// <summary>
-        /// 删除文章对应的标签
+        /// 删除文章对应的分类
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task<ActionOutput<string>> DeleteArticleTagAsync(DeleteInput input);
+        Task<ActionOutput<string>> DeleteArticleCategoryAsync(DeleteInput input);
     }
 }
