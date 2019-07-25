@@ -1,8 +1,13 @@
-﻿using Plus.Domain.Entities;
+﻿using MeowvBlog.Core.Domain.Blog;
+using Plus.AutoMapper;
 
-namespace MeowvBlog.Core.Domain.Blog
+namespace MeowvBlog.Services.Dto.Blog
 {
-    public class Tag : Entity
+    /// <summary>
+    /// 标签增删改传输对象
+    /// </summary>
+    [AutoMapFrom(typeof(Tag))]
+    public class TagDto
     {
         /// <summary>
         /// 标签名称
