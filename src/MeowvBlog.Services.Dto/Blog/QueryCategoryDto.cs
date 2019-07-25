@@ -3,8 +3,8 @@ using Plus.AutoMapper;
 
 namespace MeowvBlog.Services.Dto.Blog
 {
-    [AutoMapFrom(typeof(Tag))]
-    public class QueryTagDto : TagDto
+    [AutoMapFrom(typeof(Category))]
+    public class QueryCategoryDto : CategoryDto
     {
         public int Count { get; set; }
     }
