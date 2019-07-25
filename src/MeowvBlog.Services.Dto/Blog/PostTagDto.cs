@@ -1,8 +1,10 @@
-﻿using Plus.Domain.Entities;
+﻿using MeowvBlog.Core.Domain.Blog;
+using Plus.AutoMapper;
 
-namespace MeowvBlog.Core.Domain.Blog
+namespace MeowvBlog.Services.Dto.Blog
 {
-    public class PostTag : Entity
+    [AutoMapFrom(typeof(PostTag))]
+    public class PostTagDto
     {
         /// <summary>
         /// 文章Id
