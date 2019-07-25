@@ -3,17 +3,17 @@ using Plus.AutoMapper;
 
 namespace MeowvBlog.Services.Dto.Blog
 {
-    [AutoMapFrom(typeof(Tag))]
-    public class TagDto
+    [AutoMapFrom(typeof(Post))]
+    public class PostForPagedDto
     {
         /// <summary>
-        /// 标签名称
+        /// 标题
         /// </summary>
-        public string TagName { get; set; }
+        public string Title { get; set; }
 
         /// <summary>
-        /// 展示名称
+        /// 链接
         /// </summary>
-        public string DisplayName { get; set; }
+        public string Url { get; set; }
     }
 }
