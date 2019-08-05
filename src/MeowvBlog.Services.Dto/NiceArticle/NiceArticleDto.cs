@@ -1,9 +1,8 @@
-﻿using Plus.Domain.Entities;
-using System;
+﻿using System;
 
-namespace MeowvBlog.Core.Domain.NiceArticle
+namespace MeowvBlog.Services.Dto.NiceArticle
 {
-    public class NiceArticle : Entity
+    public class NiceArticleDto
     {
         public string Title { get; set; }
 
