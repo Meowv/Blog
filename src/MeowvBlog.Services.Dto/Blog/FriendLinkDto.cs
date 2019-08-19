@@ -1,8 +1,6 @@
-﻿using Plus.Domain.Entities;
-
-namespace MeowvBlog.Core.Domain.Blog
+﻿namespace MeowvBlog.Services.Dto.Blog
 {
-    public class FriendLink : Entity<string>
+    public class FriendLinkDto
     {
         /// <summary>
         /// 标题
