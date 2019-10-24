@@ -3,14 +3,16 @@ using System;
 using MeowvBlog.Core;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MeowvBlog.Core.Migrations
 {
     [DbContext(typeof(MeowvBlogDBContext))]
-    partial class MeowvBlogDBContextModelSnapshot : ModelSnapshot
+    [Migration("20191024022737_UpdateHotNews")]
+    partial class UpdateHotNews
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
