@@ -1,14 +1,7 @@
-﻿using System;
-
-namespace MeowvBlog.API.Models.Entity.Wallpaper
+﻿namespace MeowvBlog.API.Models.Dto.Wallpaper
 {
-    public class Wallpaper
+    public class WallpaperDto
     {
-        /// <summary>
-        /// 主键
-        /// </summary>
-        public string Id { get; set; }
-
         /// <summary>
         /// URL
         /// </summary>
@@ -23,10 +16,5 @@ namespace MeowvBlog.API.Models.Entity.Wallpaper
         /// 类型
         /// </summary>
         public int Type { get; set; }
-
-        /// <summary>
-        /// 时间戳
-        /// </summary>
-        public string Timestamp { get; set; }
     }
 }
