@@ -6,11 +6,11 @@ using Volo.Abp.EntityFrameworkCore;
 namespace Meowv.Blog.EntityFrameworkCore.Repositories.Blog
 {
     /// <summary>
-    /// PostRepository
+    /// PostTagRepository
     /// </summary>
-    public class PostRepository : EfCoreRepository<MeowvBlogDbContext, Post, int>, IPostRepository
+    public class PostTagRepository : EfCoreRepository<MeowvBlogDbContext, PostTag, int>, IPostTagRepository
     {
-        public PostRepository(IDbContextProvider<MeowvBlogDbContext> dbContextProvider) : base(dbContextProvider)
+        public PostTagRepository(IDbContextProvider<MeowvBlogDbContext> dbContextProvider) : base(dbContextProvider)
         {
         }
     }

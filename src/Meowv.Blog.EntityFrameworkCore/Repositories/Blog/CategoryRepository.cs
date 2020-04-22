@@ -2,15 +2,14 @@
 using Meowv.Blog.Domain.Blog.Repositories;
 using Volo.Abp.Domain.Repositories.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;
-
 namespace Meowv.Blog.EntityFrameworkCore.Repositories.Blog
 {
     /// <summary>
-    /// PostRepository
+    /// PostTagRepository
     /// </summary>
-    public class PostRepository : EfCoreRepository<MeowvBlogDbContext, Post, int>, IPostRepository
+    public class CategoryRepository : EfCoreRepository<MeowvBlogDbContext, Category, int>, ICategoryRepository
     {
-        public PostRepository(IDbContextProvider<MeowvBlogDbContext> dbContextProvider) : base(dbContextProvider)
+        public CategoryRepository(IDbContextProvider<MeowvBlogDbContext> dbContextProvider) : base(dbContextProvider)
         {
         }
     }
