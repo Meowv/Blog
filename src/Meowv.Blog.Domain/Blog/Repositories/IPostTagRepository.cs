@@ -3,10 +3,10 @@
 namespace Meowv.Blog.Domain.Blog.Repositories
 {
     /// <summary>
-    /// IPostRepository
+    /// IPostTagRepository
     /// </summary>
-    public interface IPostRepository : IRepository<Post, int>
+    public interface IPostTagRepository : IRepository<PostTag, int>
     {
-        
+
     }
 }
