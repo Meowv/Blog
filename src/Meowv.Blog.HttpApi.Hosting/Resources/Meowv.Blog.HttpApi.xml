@@ -1,0 +1,671 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Meowv.Blog.HttpApi</name>
+    </assembly>
+    <members>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.AuthController.GetLoginAddressAsync">
+            <summary>
+            获取登录地址(GitHub)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.AuthController.GetAccessTokenAsync(System.String)">
+            <summary>
+            获取AccessToken
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.AuthController.GenerateTokenAsync(System.String)">
+            <summary>
+            登录成功，生成Token
+            </summary>
+            <param name="access_token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.AuthController.VerifyToken(System.String)">
+            <summary>
+            验证Token是否合法
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.GetPostForAdminAsync(System.Int32)">
+            <summary>
+            获取文章详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.QueryPostsForAdminAsync(Meowv.Blog.Application.Contracts.PagingInput)">
+            <summary>
+            分页查询文章列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.InsertPostAsync(Meowv.Blog.Application.Contracts.Blog.Params.EditPostInput)">
+            <summary>
+            新增文章
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.UpdatePostAsync(System.Int32,Meowv.Blog.Application.Contracts.Blog.Params.EditPostInput)">
+            <summary>
+            更新文章
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.DeletePostAsync(System.Int32)">
+            <summary>
+            删除文章
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.QueryCategoriesForAdminAsync">
+            <summary>
+            查询分类列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.InsertCategoryAsync(Meowv.Blog.Application.Contracts.Blog.Params.EditCategoryInput)">
+            <summary>
+            新增分类
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.UpdateCategoryAsync(System.Int32,Meowv.Blog.Application.Contracts.Blog.Params.EditCategoryInput)">
+            <summary>
+            更新分类
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.DeleteCategoryAsync(System.Int32)">
+            <summary>
+            删除分类
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.QueryTagsForAdminAsync">
+            <summary>
+            查询标签列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.InsertTagAsync(Meowv.Blog.Application.Contracts.Blog.Params.EditTagInput)">
+            <summary>
+            新增标签
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.UpdateTagAsync(System.Int32,Meowv.Blog.Application.Contracts.Blog.Params.EditTagInput)">
+            <summary>
+            更新标签
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.DeleteTagAsync(System.Int32)">
+            <summary>
+            删除标签
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.QueryFriendLinksForAdminAsync">
+            <summary>
+            查询友链列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.InsertFriendLinkAsync(Meowv.Blog.Application.Contracts.Blog.Params.EditFriendLinkInput)">
+            <summary>
+            新增友链
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.UpdateFriendLinkAsync(System.Int32,Meowv.Blog.Application.Contracts.Blog.Params.EditFriendLinkInput)">
+            <summary>
+            更新友链
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.DeleteFriendLinkAsync(System.Int32)">
+            <summary>
+            删除友链
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.GetPostDetailAsync(System.String)">
+            <summary>
+            根据URL获取文章详情
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.QueryPostsAsync(Meowv.Blog.Application.Contracts.PagingInput)">
+            <summary>
+            分页查询文章列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.QueryPostsByCategoryAsync(System.String)">
+            <summary>
+            通过分类名称查询文章列表
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.QueryPostsByTagAsync(System.String)">
+            <summary>
+            通过标签名称查询文章列表
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.GetCategoryAsync(System.String)">
+            <summary>
+            获取分类名称
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.QueryCategoriesAsync">
+            <summary>
+            查询分类列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.GetTagAsync(System.String)">
+            <summary>
+            获取标签名称
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.QueryTagsAsync">
+            <summary>
+            查询标签列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.BlogController.QueryFriendLinksAsync">
+            <summary>
+            查询友链列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.CommonController.GetBingImgUrlAsync">
+            <summary>
+            必应每日壁纸，返回图片URL
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.CommonController.GetBingImgFileAsync">
+            <summary>
+            必应每日壁纸，直接返回图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.CommonController.GetGirlsAsync">
+            <summary>
+            获取妹子图，返回URL列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.CommonController.GetGirlImgUrlAsync">
+            <summary>
+            获取一张妹子图，返回图片URL
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.CommonController.GetGirlImgFileAsync">
+            <summary>
+            获取一张妹子图，直接返回图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.CommonController.GetCatsAsync">
+            <summary>
+            获取猫图，返回URL列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.CommonController.GetCatImgUrlAsync">
+            <summary>
+            获取一张猫图，返回图片URL
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.CommonController.GetCatImgFileAsync">
+            <summary>
+            获取一张猫图，直接返回图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.CommonController.Ip2ReginAsync(System.String)">
+            <summary>
+            根据IP地址获取所在区域
+            </summary>
+            <param name="ip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.CommonController.RemoveBgAsync(System.String)">
+            <summary>
+            智能抠图，移除图片背景
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.CommonController.RemoveBgAsync(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            智能抠图，移除图片背景
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.CommonController.SpeechTtsAsync(System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            语音合成
+            </summary>
+            <param name="content">合成的文本，长度在1024字节以内</param>
+            <param name="spd">语速，取值0-9，默认为5中语速</param>
+            <param name="pit">音调，取值0-9，默认为5中语调</param>
+            <param name="vol">音量，取值0-15，默认为5中音量</param>
+            <param name="per">发音人, 0为女声，1为男声，3为情感合成-度逍遥，4为情感合成-度丫丫</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.CommonController.SpeechTtsGreetWordAsync">
+            <summary>
+            语音合成欢迎词
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.CommonController.QueryEmojisAsync(System.String,System.String)">
+            <summary>
+            根据条件查询 Emoji 表情列表
+            </summary>
+            <param name="category"></param>
+            <param name="keyword"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.CommonController.ReturnImgAsync(System.String)">
+            <summary>
+            返回图片
+            </summary>
+            <param name="url"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.FMController.GetChannelsAsync">
+            <summary>
+            获取专辑分类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.FMController.GetFmAsync(System.Int32)">
+            <summary>
+            根据专辑分类获取随机歌曲
+            </summary>
+            <param name="channelId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.FMController.GetRandomFmAsync">
+            <summary>
+            获取随机歌曲
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.FMController.GetLyricAsync(System.String,System.String)">
+            <summary>
+            获取歌词
+            </summary>
+            <param name="sid"></param>
+            <param name="ssid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.GalleryController.QueryAlbumsAsync">
+            <summary>
+            查询图集列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.GalleryController.QueryImagesAsync(Meowv.Blog.Application.Contracts.Gallery.Params.QueryImagesInput)">
+            <summary>
+            根据图集参数查询图片列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.HotNewsController.GetHotNewsSourceAsync">
+            <summary>
+            获取每日热点来源列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.HotNewsController.QueryHotNewsAsync(System.Int32)">
+            <summary>
+            根据来源获取每日热点列表
+            </summary>
+            <param name="sourceId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.HotNewsController.BulkInsertHotNewsAsync(Meowv.Blog.Application.Contracts.HotNews.Params.BulkInsertHotNewsInput)">
+            <summary>
+            批量插入每日热点数据
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.MTAController.Ctr_core_data(System.String,System.String,System.String)">
+            <summary>
+            应用历史趋势
+            每天的pv\uv\vv\iv数据
+            </summary>
+            <param name="start_date">开始时间（Y-m-d）</param>
+            <param name="end_date">结束时间（Y-m-d）</param>
+            <param name="idx">查询指标(pv,uv,vv,iv)，使用“,”间隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.MTAController.Ctr_realtime(System.String)">
+            <summary>
+            应用实时小时数据
+            当天每小时的pv\uv\vv\iv数据
+            </summary>
+            <param name="idx">查询指标(pv,uv,vv,iv)，使用“,”间隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.MTAController.Ctr_realtime_heartbeat">
+            <summary>
+            应用心跳数据
+            当前pv\uv\vv\iv心跳数据数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.MTAController.Ctr_user_realtime(System.Int32)">
+            <summary>
+            实时访客
+            在24小时内的实时访客信息
+            </summary>
+            <param name="page">页码，每页200条记录</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.MTAController.Ctr_user_compare(System.String,System.String)">
+            <summary>
+            新老访客比
+            按天查询当天新访客与旧访客的数量
+            </summary>
+            <param name="start_date">开始时间（Y-m-d）</param>
+            <param name="end_date">结束时间（Y-m-d）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.MTAController.Ctr_user_portrait(System.String,System.String,System.String)">
+            <summary>
+            用户画像
+            查询用户画像数据，包含性别比例、年龄分布、学历分布、职业分布，数据为pv量
+            </summary>
+            <param name="start_date">开始时间（Y-m-d）</param>
+            <param name="end_date">结束时间（Y-m-d）</param>
+            <param name="idx">查询指标(sex-性别,age-年龄,grade-学历,profession-职业)，使用“,”间隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.MTAController.Ctr_area(System.String,System.String,System.String,System.String)">
+            <summary>
+            地区数据
+            按天查询地区的pv\uv\vv\iv量
+            </summary>
+            <param name="type_ids">城市id，见https://mta.qq.com/docs/h5_api.html(省市字典，市字典)使用“,”间隔</param>
+            <param name="start_date">开始时间（Y-m-d）</param>
+            <param name="end_date">结束时间（Y-m-d）</param>
+            <param name="idx">查询指标(pv,uv,vv,iv)，使用“,”间隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.MTAController.Ctr_area_province(System.String,System.String,System.String,System.String)">
+            <summary>
+            省市数据
+            按天查询省市下有流量的城市的pv\uv\vv\iv量
+            </summary>
+            <param name="type_ids">省市id，可选值见https://mta.qq.com/docs/h5_api.html(省市字典中的省ID)使用“,”间隔</param>
+            <param name="start_date">开始时间（Y-m-d）</param>
+            <param name="end_date">结束时间（Y-m-d）</param>
+            <param name="idx">查询指标(pv,uv,vv,iv)，使用“,”间隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.MTAController.Ctr_operator(System.String,System.String,System.String,System.String)">
+            <summary>
+            运营商
+            按天查询运营商的pv\uv\vv\iv量
+            </summary>
+            <param name="type_ids">运营商ID，可选值见https://mta.qq.com/docs/h5_api.html(运营商)使用“,”间隔</param>
+            <param name="start_date">开始时间（Y-m-d）</param>
+            <param name="end_date">结束时间（Y-m-d）</param>
+            <param name="idx">查询指标(pv,uv,vv,iv)，使用“,”间隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.MTAController.Ctr_client_para(System.String,System.String,System.String,System.String)">
+            <summary>
+            终端属性列表
+            按天查询对应属性的终端信息数据
+            </summary>
+            <param name="start_date">开始时间（Y-m-d）</param>
+            <param name="end_date">结束时间（Y-m-d）</param>
+            <param name="type_id">终端属性，可选值见https://mta.qq.com/docs/h5_api.html(终端属性)</param>
+            <param name="idx">查询指标(pv,uv,vv,iv)，使用“,”间隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.MTAController.Ctr_client_content(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            终端信息
+            按天查询终端信息数据
+            </summary>
+            <param name="start_date">开始时间（Y-m-d）</param>
+            <param name="end_date">结束时间（Y-m-d）</param>
+            <param name="type_id">终端属性，可选值见https://mta.qq.com/docs/h5_api.html(终端属性)</param>
+            <param name="type_contents">终端名称，可选值为终端属性列表返回的client值，使用“,”间隔查询</param>
+            <param name="idx">查询指标(pv,uv,vv,iv)，使用“,”间隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.MTAController.Ctr_page_realtime(System.String)">
+            <summary>
+            页面排行-当天实时列表
+            查询当天所有url的pv\uv\vv\iv数据
+            </summary>
+            <param name="idx">查询指标(pv,uv,vv,iv)，使用“,”间隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.MTAController.Ctr_page_offline(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            页面排行-离线列表
+            按天查询所有url的pv\uv\vv\iv数据
+            </summary>
+            <param name="start_date">开始时间（Y-m-d）</param>
+            <param name="end_date">结束时间（Y-m-d）</param>
+            <param name="page">页码，每页2000条</param>
+            <param name="idx">查询指标(pv,uv,vv,iv)，使用“,”间隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.MTAController.Ctr_page_url(System.String,System.String,System.String,System.String)">
+            <summary>
+            页面排行-指定查询部分url
+            按天查询url的pv\uv\vv\iv数据。
+            </summary>
+            <param name="start_date">开始时间（Y-m-d）</param>
+            <param name="end_date">结束时间（Y-m-d）</param>
+            <param name="urls">url地址，多个使用逗号“,”间隔</param>
+            <param name="idx">查询指标(pv,uv,vv,iv)，使用“,”间隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.MTAController.Ctr_page_speed(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            性能监控
+            按天查询对应省市的访问延时与解析时长
+            </summary>
+            <param name="start_date">开始时间（Y-m-d）</param>
+            <param name="end_date">结束时间（Y-m-d）</param>
+            <param name="type_contents">省市id/运营商id/页面地址，可选值见https://mta.qq.com/docs/h5_api.html(省市/运营商)</param>
+            <param name="type">类别，可选值见https://mta.qq.com/docs/h5_api.html(性能监控)</param>
+            <param name="idx">查询指标(visitor_speed-访问延时,dns_speed-DNS解析时长,tcp_speed-TCP链接时长,request_speed-首字节时长,resource_speed-资源下载时长,dom_speed-页面渲染时长)，使用“,”间隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.MTAController.Ctr_page_depth(System.String,System.String)">
+            <summary>
+            访问深度
+            按天查询用户访问深度
+            </summary>
+            <param name="start_date">开始时间（Y-m-d）</param>
+            <param name="end_date">结束时间（Y-m-d）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.MTAController.Ctr_source_out(System.String,System.String,System.String,System.String)">
+            <summary>
+            外部链接
+            按天查询外部同站链接带来的流量情情况
+            </summary>
+            <param name="urls">url地址，多个使用逗号“,”间隔</param>
+            <param name="start_date">开始时间（Y-m-d）</param>
+            <param name="end_date">结束时间（Y-m-d）</param>
+            <param name="idx">查询指标(pv,uv,vv,iv)，使用“,”间隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.MTAController.Ctr_page_land(System.String,System.String,System.String)">
+            <summary>
+            入口页面
+            按天查询用户最后访问的进入次数与跳出率
+            </summary>
+            <param name="urls">url地址，多个使用逗号“,”间隔</param>
+            <param name="start_date">开始时间（Y-m-d）</param>
+            <param name="end_date">结束时间（Y-m-d）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.MTAController.Ctr_page_exit(System.String,System.String,System.String)">
+            <summary>
+            离开页面
+            按天查询最后访问页面的离次数
+            </summary>
+            <param name="urls">url地址，多个使用逗号“,”间隔</param>
+            <param name="start_date">开始时间（Y-m-d）</param>
+            <param name="end_date">结束时间（Y-m-d）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.MTAController.Ctr_custom(System.String,System.String,System.String,System.String)">
+            <summary>
+            自定义事件
+            按天查询自定义事件的pv\uv\vv\iv
+            </summary>
+            <param name="custom">自定义事件id，多个自定义事件ID需使用逗号“,”间隔</param>
+            <param name="start_date">开始时间（Y-m-d）</param>
+            <param name="end_date">结束时间（Y-m-d）</param>
+            <param name="idx">查询指标(pv,uv,vv,iv)，使用“,”间隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.MTAController.Ctr_adtag(System.String,System.String,System.String,System.String)">
+            <summary>
+            渠道效果统计
+            按天查询渠道的分析数据
+            </summary>
+            <param name="start_date">开始时间（Y-m-d）</param>
+            <param name="end_date">结束时间（Y-m-d）</param>
+            <param name="adtags">渠道id，多个使用“,”间隔</param>
+            <param name="idx">查询指标(pv,uv,vv,iv)，使用“,”间隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.SignatureController.GenerateSignatureAsync(Meowv.Blog.Application.Contracts.Signature.Params.GenerateSignatureInput)">
+            <summary>
+            生成个性艺术签名
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.SignatureController.GenerateSignatureForPostAsync(Meowv.Blog.Application.Contracts.Signature.Params.GenerateSignatureInput)">
+            <summary>
+            生成个性艺术签名
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.SignatureController.GetSignaturesAsync(System.Int32)">
+            <summary>
+            获取个性签名调用记录
+            </summary>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.SignatureController.GetSignatureTypesAsync">
+            <summary>
+            获取所有签名类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.SoulController.GetRandomChickenSoupAsync">
+            <summary>
+            获取鸡汤文本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.SoulController.BulkInsertChickenSoupAsync(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            批量插入鸡汤
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.TCAController.QueryCdnRefreshHistoryAsync(System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            查询CDN刷新历史
+            </summary>
+            <param name="startTime"></param>
+            <param name="endTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.TCAController.CdnRefreshAsync(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            CDN刷新
+            </summary>
+            <param name="urls"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.TCAController.CaptchaAsync(System.String,System.String)">
+            <summary>
+            验证码校验
+            </summary>
+            <param name="ticket"></param>
+            <param name="randstr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.WallpaperController.GetWallpaperTypesAsync">
+            <summary>
+            获取所有壁纸类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.WallpaperController.QueryWallpapersAsync(Meowv.Blog.Application.Contracts.Wallpaper.Params.QueryWallpapersInput)">
+            <summary>
+            分页查询壁纸
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.HttpApi.Controllers.WallpaperController.BulkInsertWallpaperAsync(Meowv.Blog.Application.Contracts.Wallpaper.Params.BulkInsertWallpaperInput)">
+            <summary>
+            批量插入壁纸
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,630 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Meowv.Blog.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:Meowv.Blog.Domain.Blog.Category">
+            <summary>
+            Category
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Blog.Category.CategoryName">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Blog.Category.DisplayName">
+            <summary>
+            展示名称
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Blog.FriendLink">
+            <summary>
+            FriendLink
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Blog.FriendLink.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Blog.FriendLink.LinkUrl">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Blog.Post">
+            <summary>
+            Post
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Blog.Post.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Blog.Post.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Blog.Post.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Blog.Post.Html">
+            <summary>
+            HTML
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Blog.Post.Markdown">
+            <summary>
+            Markdown
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Blog.Post.CategoryId">
+            <summary>
+            分类Id
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Blog.Post.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Blog.PostTag">
+            <summary>
+            PostTag
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Blog.PostTag.PostId">
+            <summary>
+            文章Id
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Blog.PostTag.TagId">
+            <summary>
+            标签Id
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Blog.Repositories.ICategoryRepository">
+            <summary>
+            ICategoryRepository
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Blog.Repositories.IFriendLinkRepository">
+            <summary>
+            IFriendLinkRepository
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Blog.Repositories.IPostRepository">
+            <summary>
+            IPostRepository
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Blog.Repositories.IPostTagRepository">
+            <summary>
+            IPostTagRepository
+            </summary>
+        </member>
+        <member name="M:Meowv.Blog.Domain.Blog.Repositories.IPostTagRepository.BulkInsertAsync(System.Collections.Generic.IEnumerable{Meowv.Blog.Domain.Blog.PostTag})">
+            <summary>
+            批量插入
+            </summary>
+            <param name="postTags"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Blog.Repositories.ITagRepository">
+            <summary>
+            ITagRepository
+            </summary>
+        </member>
+        <member name="M:Meowv.Blog.Domain.Blog.Repositories.ITagRepository.BulkInsertAsync(System.Collections.Generic.IEnumerable{Meowv.Blog.Domain.Blog.Tag})">
+            <summary>
+            批量插入
+            </summary>
+            <param name="tags"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Blog.Tag">
+            <summary>
+            Tag
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Blog.Tag.TagName">
+            <summary>
+            标签名称
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Blog.Tag.DisplayName">
+            <summary>
+            展示名称
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Configurations.AppSettings">
+            <summary>
+            appsettings.json配置文件数据读取类
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.AppSettings._config">
+            <summary>
+            配置文件的根节点
+            </summary>
+        </member>
+        <member name="M:Meowv.Blog.Domain.Configurations.AppSettings.#cctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Configurations.AppSettings.EnableDb">
+            <summary>
+            EnableDb
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Configurations.AppSettings.ConnectionStrings">
+            <summary>
+            ConnectionStrings
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Configurations.AppSettings.ApiVersion">
+            <summary>
+            ApiVersion
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Configurations.AppSettings.ListenPort">
+            <summary>
+            监听端口
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Configurations.AppSettings.Caching">
+            <summary>
+            Caching
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Configurations.AppSettings.Caching.RedisConnectionString">
+            <summary>
+            RedisConnectionString
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Configurations.AppSettings.Caching.IsOpen">
+            <summary>
+            是否开启
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Configurations.AppSettings.GitHub">
+            <summary>
+            GitHub
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Configurations.AppSettings.JWT">
+            <summary>
+            JWT
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Configurations.AppSettings.Hangfire">
+            <summary>
+            Hangfire
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Configurations.AppSettings.MTA">
+            <summary>
+            MTA
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Configurations.AppSettings.Signature">
+            <summary>
+            个性签名配置
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Configurations.AppSettings.BaiduAI">
+            <summary>
+            百度AI 语音合成
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Configurations.AppSettings.TencentCloud">
+            <summary>
+            腾讯云API
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Configurations.AppSettings.RemoveBg">
+            <summary>
+            RemoveBg
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Configurations.AppSettings.FMApi">
+            <summary>
+            FM Api
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Configurations.AppSettings.Email">
+            <summary>
+            Email配置
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Configurations.AppSettings.Email.Host">
+            <summary>
+            Host
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Configurations.AppSettings.Email.Port">
+            <summary>
+            Port
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Configurations.AppSettings.Email.UseSsl">
+            <summary>
+            UseSsl
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Configurations.AppSettings.Email.From">
+            <summary>
+            From
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Configurations.AppSettings.Email.From.Username">
+            <summary>
+            Username
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Configurations.AppSettings.Email.From.Password">
+            <summary>
+            Password
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Configurations.AppSettings.Email.From.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Configurations.AppSettings.Email.From.Address">
+            <summary>
+            Address
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Configurations.AppSettings.Email.To">
+            <summary>
+            To
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.GitHubConfig.API_Authorize">
+            <summary>
+            GET请求，跳转GitHub登录界面，获取用户授权，得到code
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.GitHubConfig.API_AccessToken">
+            <summary>
+            POST请求，根据code得到access_token
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.GitHubConfig.API_User">
+            <summary>
+            GET请求，根据access_token得到用户信息
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.GitHubConfig.UserId">
+            <summary>
+            Github UserId
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.GitHubConfig.Client_ID">
+            <summary>
+            Client ID
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.GitHubConfig.Client_Secret">
+            <summary>
+            Client Secret
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.GitHubConfig.Redirect_Uri">
+            <summary>
+            Authorization callback URL
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.GitHubConfig.ApplicationName">
+            <summary>
+            Application name
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.Ctr_core_data">
+            <summary>
+            应用历史趋势
+            每天的pv\uv\vv\iv数据
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.Ctr_realtime">
+            <summary>
+            应用实时小时数据
+            当天每小时的pv\uv\vv\iv数据
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.Ctr_realtime_heartbeat">
+            <summary>
+            应用心跳数据
+            当前pv\uv\vv\iv心跳数据数据
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.Ctr_user_realtime">
+            <summary>
+            实时访客
+            在24小时内的实时访客信息
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.Ctr_user_compare">
+            <summary>
+            新老访客比
+            按天查询当天新访客与旧访客的数量
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.Ctr_user_portrait">
+            <summary>
+            用户画像
+            查询用户画像数据，包含性别比例、年龄分布、学历分布、职业分布，数据为pv量
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.Ctr_area">
+            <summary>
+            地区数据
+            按天查询地区的pv\uv\vv\iv量
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.Ctr_area_province">
+            <summary>
+            省市数据
+            按天查询省市下有流量的城市的pv\uv\vv\iv量
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.Ctr_operator">
+            <summary>
+            运营商
+            按天查询运营商的pv\uv\vv\iv量
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.Ctr_client_para">
+            <summary>
+            终端属性列表
+            按天查询对应属性的终端信息数据
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.Ctr_client_content">
+            <summary>
+            终端信息
+            按天查询终端信息数据
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.Ctr_page_realtime">
+            <summary>
+            页面排行-当天实时列表
+            查询当天所有url的pv\uv\vv\iv数据
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.Ctr_page_offline">
+            <summary>
+            页面排行-离线列表
+            按天查询所有url的pv\uv\vv\iv数据
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.Ctr_page_url">
+            <summary>
+            页面排行-指定查询部分url
+            按天查询url的pv\uv\vv\iv数据。
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.Ctr_page_speed">
+            <summary>
+            性能监控
+            按天查询对应省市的访问延时与解析时长
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.Ctr_page_depth">
+            <summary>
+            访问深度
+            按天查询用户访问深度
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.Ctr_source_out">
+            <summary>
+            外部链接
+            按天查询外部同站链接带来的流量情情况
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.Ctr_page_land">
+            <summary>
+            入口页面
+            按天查询用户最后访问的进入次数与跳出率
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.Ctr_page_exit">
+            <summary>
+            离开页面
+            按天查询最后访问页面的离次数
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.Ctr_custom">
+            <summary>
+            自定义事件
+            按天查询自定义事件的pv\uv\vv\iv
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.Ctr_adtag">
+            <summary>
+            渠道效果统计
+            按天查询渠道的分析数据
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.App_Id">
+            <summary>
+            App_Id
+            </summary>
+        </member>
+        <member name="F:Meowv.Blog.Domain.Configurations.MtaConfig.SECRET_KEY">
+            <summary>
+            SECRET_KEY
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Gallery.Album.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Gallery.Album.ImgUrl">
+            <summary>
+            图片URL
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Gallery.Album.IsPublic">
+            <summary>
+            是否公开
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Gallery.Album.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Gallery.Album.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Gallery.Image.AlbumId">
+            <summary>
+            AlbumId
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Gallery.Image.ImgUrl">
+            <summary>
+            图片URL
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Gallery.Image.Width">
+            <summary>
+            宽
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Gallery.Image.Height">
+            <summary>
+            高
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Gallery.Image.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.HotNews.HotNews.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.HotNews.HotNews.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.HotNews.HotNews.SourceId">
+            <summary>
+            SourceId
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.HotNews.HotNews.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Domain.HotNews.Repositories.IHotNewsRepository">
+            <summary>
+            IHotNewsRepository
+            </summary>
+        </member>
+        <member name="M:Meowv.Blog.Domain.HotNews.Repositories.IHotNewsRepository.BulkInsertAsync(System.Collections.Generic.IEnumerable{Meowv.Blog.Domain.HotNews.HotNews})">
+            <summary>
+            批量插入
+            </summary>
+            <param name="hotNews"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Signature.Repositories.ISignatureRepository">
+            <summary>
+            ISignatureRepository
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Signature.Signature.Name">
+            <summary>
+            名字
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Signature.Signature.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Signature.Signature.Url">
+            <summary>
+            URL
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Signature.Signature.Ip">
+            <summary>
+            IP
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Signature.Signature.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Soul.ChickenSoup.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="M:Meowv.Blog.Domain.Soul.Repositories.IChickenSoupRepository.GetRandomAsync">
+            <summary>
+            获取一条随机数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Meowv.Blog.Domain.Soul.Repositories.IChickenSoupRepository.BulkInsertAsync(System.Collections.Generic.IEnumerable{Meowv.Blog.Domain.Soul.ChickenSoup})">
+            <summary>
+            批量插入数据
+            </summary>
+            <param name="chickenSoups"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Meowv.Blog.Domain.Wallpaper.Repositories.IWallpaperRepository">
+            <summary>
+            IWallpaperRepository
+            </summary>
+        </member>
+        <member name="M:Meowv.Blog.Domain.Wallpaper.Repositories.IWallpaperRepository.BulkInsertAsync(System.Collections.Generic.IEnumerable{Meowv.Blog.Domain.Wallpaper.Wallpaper})">
+            <summary>
+            批量插入
+            </summary>
+            <param name="wallpapers"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Wallpaper.Wallpaper.Url">
+            <summary>
+            URL
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Wallpaper.Wallpaper.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Wallpaper.Wallpaper.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Domain.Wallpaper.Wallpaper.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+    </members>
+</doc>

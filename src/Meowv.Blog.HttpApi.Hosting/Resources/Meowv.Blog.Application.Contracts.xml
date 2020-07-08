@@ -1,0 +1,444 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Meowv.Blog.Application.Contracts</name>
+    </assembly>
+    <members>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.CategoryDto.CategoryName">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.CategoryDto.DisplayName">
+            <summary>
+            展示名称
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.FriendLinkDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.FriendLinkDto.LinkUrl">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostBriefDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostBriefDto.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostBriefDto.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostBriefDto.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostBriefForAdminDto.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostDetailDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostDetailDto.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostDetailDto.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostDetailDto.Html">
+            <summary>
+            HTML
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostDetailDto.Markdown">
+            <summary>
+            Markdown
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostDetailDto.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostDetailDto.Category">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostDetailDto.Tags">
+            <summary>
+            标签列表
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostDetailDto.Previous">
+            <summary>
+            上一篇
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostDetailDto.Next">
+            <summary>
+            下一篇
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostDto.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostDto.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostDto.Html">
+            <summary>
+            HTML
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostDto.Markdown">
+            <summary>
+            Markdown
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostDto.CategoryId">
+            <summary>
+            分类Id
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostDto.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostForAdminDto.Tags">
+            <summary>
+            标签列表
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostForPagedDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.PostForPagedDto.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.QueryCategoryDto.Count">
+            <summary>
+            总数
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.QueryCategoryForAdminDto.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.QueryFriendLinkForAdminDto.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.QueryPostDto.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.QueryPostDto.Posts">
+            <summary>
+            Posts
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.QueryPostForAdminDto.Posts">
+            <summary>
+            Posts
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.QueryTagDto.Count">
+            <summary>
+            总数
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.QueryTagForAdminDto.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.TagDto.TagName">
+            <summary>
+            标签名称
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Blog.TagDto.DisplayName">
+            <summary>
+            展示名称
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.FM.ChannelDto.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.FM.ChannelDto.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.FM.ChannelDto.Intro">
+            <summary>
+            介绍
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.FM.ChannelDto.Banner">
+            <summary>
+            Banner
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.FM.ChannelDto.Cover">
+            <summary>
+            Cover
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.FM.FMDto.AlbumTitle">
+            <summary>
+            专辑名称
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.FM.FMDto.Artist">
+            <summary>
+            艺术家
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.FM.FMDto.Picture">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.FM.FMDto.Url">
+            <summary>
+            URL
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.FM.FMDto.Sid">
+            <summary>
+            Sid
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.FM.FMDto.Ssid">
+            <summary>
+            Ssid
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.FM.FMDto.Lyric">
+            <summary>
+            歌词
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Gallery.AlbumDto.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Gallery.AlbumDto.Count">
+            <summary>
+            总数
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Gallery.AlbumDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Gallery.AlbumDto.ImgUrl">
+            <summary>
+            图片URL
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Gallery.AlbumDto.IsPublic">
+            <summary>
+            是否公开
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Gallery.ImageDto.ImgUrl">
+            <summary>
+            图片URL
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Gallery.ImageDto.Width">
+            <summary>
+            宽
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Gallery.ImageDto.Height">
+            <summary>
+            高
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Gallery.Params.QueryImagesInput.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Gallery.Params.QueryImagesInput.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.HotNews.HotNewsDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.HotNews.HotNewsDto.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.HotNews.HotNewsJobItem`1.Result">
+            <summary>
+            <see cref="P:Meowv.Blog.Application.Contracts.HotNews.HotNewsJobItem`1.Result"/>
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.HotNews.HotNewsJobItem`1.Source">
+            <summary>
+            来源
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.HotNews.Params.BulkInsertHotNewsInput.Source">
+            <summary>
+            来源
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.HotNews.Params.BulkInsertHotNewsInput.HotNews">
+            <summary>
+            每日热点列表
+            </summary>
+        </member>
+        <member name="T:Meowv.Blog.Application.Contracts.PagingInput">
+            <summary>
+            分页输入参数
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.PagingInput.Page">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.PagingInput.Limit">
+            <summary>
+            限制条数
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Signature.Params.GenerateSignatureInput.Name">
+            <summary>
+            名字
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Signature.Params.GenerateSignatureInput.Id">
+            <summary>
+            类型Id
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Signature.Params.GenerateSignatureInput.Timestamp">
+            <summary>
+            时间戳
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Signature.Params.GenerateSignatureInput.Sign">
+            <summary>
+            验签
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Signature.SignatureDto.Name">
+            <summary>
+            名字
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Signature.SignatureDto.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Signature.SignatureDto.Url">
+            <summary>
+            URL
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Signature.SignatureDto.Ip">
+            <summary>
+            IP
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Signature.SignatureDto.CreateTime">
+            <summary>
+            日期
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Wallpaper.Params.BulkInsertWallpaperInput.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Wallpaper.Params.BulkInsertWallpaperInput.Wallpapers">
+            <summary>
+            壁纸列表
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Wallpaper.Params.QueryWallpapersInput.Type">
+            <summary>
+            类型
+            <see cref="T:Meowv.Blog.Domain.Shared.Enum.WallpaperEnum"/>
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Wallpaper.Params.QueryWallpapersInput.Keywords">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Wallpaper.WallpaperDto.Url">
+            <summary>
+            URL
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Wallpaper.WallpaperDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Wallpaper.WallpaperJobItem`1.Result">
+            <summary>
+            <see cref="P:Meowv.Blog.Application.Contracts.Wallpaper.WallpaperJobItem`1.Result"/>
+            </summary>
+        </member>
+        <member name="P:Meowv.Blog.Application.Contracts.Wallpaper.WallpaperJobItem`1.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+    </members>
+</doc>
