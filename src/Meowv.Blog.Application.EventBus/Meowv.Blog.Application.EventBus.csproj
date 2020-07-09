@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <Import Project="..\..\common.props" />
 
@@ -6,9 +6,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>..\Meowv.Blog.HttpApi.Hosting\Resources\Meowv.Blog.Application.Contracts.xml</DocumentationFile>
-  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Blog\" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Meowv.Blog.Domain\Meowv.Blog.Domain.csproj" />
