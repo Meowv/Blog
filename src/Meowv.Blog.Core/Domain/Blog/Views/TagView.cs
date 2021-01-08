@@ -1,6 +1,6 @@
-﻿namespace Meowv.Blog.Domain.Blog
+﻿namespace Meowv.Blog.Domain.Blog.Views
 {
-    public class Tag : EntityBase
+    public class TagView
     {
         /// <summary>
         /// 名称

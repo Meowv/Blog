@@ -1,6 +1,6 @@
-﻿namespace Meowv.Blog.Domain.Blog
+﻿namespace Meowv.Blog.Dto.Blog.Params
 {
-    public class Tag : EntityBase
+    public class CreateCategoryInput
     {
         /// <summary>
         /// 名称
