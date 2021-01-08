@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Meowv.Blog.Domain.Blog
+namespace Meowv.Blog.Dto.Blog.Params
 {
-    public class Post : EntityBase
+    public class CreatePostInput
     {
         /// <summary>
         /// 标题
@@ -31,14 +31,14 @@ namespace Meowv.Blog.Domain.Blog
         public string Markdown { get; set; }
 
         /// <summary>
-        /// 分类
+        /// 分类Id
         /// </summary>
-        public Category Category { get; set; }
+        public string CategoryId { get; set; }
 
         /// <summary>
         /// 标签列表
         /// </summary>
-        public List<Tag> Tags { get; set; }
+        public List<string> Tags { get; set; }
 
         /// <summary>
         /// 创建时间
