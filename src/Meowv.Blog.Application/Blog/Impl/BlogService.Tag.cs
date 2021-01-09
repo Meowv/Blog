@@ -9,20 +9,20 @@ namespace Meowv.Blog.Blog.Impl
     public partial class BlogService
     {
         /// <summary>
-        /// Get category list
+        /// Get tag list
         /// </summary>
         /// <returns></returns>
-        public async Task<BlogResponse<List<GetCategoryDto>>> GetCategoriesAsync()
+        public async Task<BlogResponse<List<GetTagDto>>> GetTagsAsync()
         {
-            var response = new BlogResponse<List<GetCategoryDto>>();
+            var response = new BlogResponse<List<GetTagDto>>();
 
-            var categories = await _categories.GetListAsync();
+            var tags = await _tags.GetListAsync();
 
-            var result = categories.Select(x => new GetCategoryDto
+            var result = tags.Select(x => new GetTagDto
             {
                 Name = x.Name,
                 Alias = x.Alias,
-                Total = _posts.GetCountByCategoryAsync(x.Id).Result
+                Total = _posts.GetCountByTagAsync(x.Id).Result
             }).Where(x => x.Total > 0).ToList();
 
             response.Result = result;
