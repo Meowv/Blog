@@ -9,10 +9,10 @@ namespace Meowv.Blog.Caching.Blog
     public partial interface IBlogCacheService
     {
         /// <summary>
-        /// Get the list of categories from the cache.
+        /// Get the list of friendlinks from the cache.
         /// </summary>
         /// <param name="func"></param>
         /// <returns></returns>
-        Task<BlogResponse<List<GetCategoryDto>>> GetCategoriesAsync(Func<Task<BlogResponse<List<GetCategoryDto>>>> func);
+        Task<BlogResponse<List<FriendLinkDto>>> GetFriendlinksAsync(Func<Task<BlogResponse<List<FriendLinkDto>>>> func);
     }
 }
