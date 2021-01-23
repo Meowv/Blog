@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace Meowv.Blog.Web.Pages.Posts
 {
-    public class CategoryModel : PageBase
+    public class TagModel : PageBase
     {
-        public CategoryModel(IHttpClientFactory httpClientFactory) : base(httpClientFactory)
+        public TagModel(IHttpClientFactory httpClientFactory) : base(httpClientFactory)
         {
         }
 
         [BindProperty]
         public BlogResponse<List<GetPostDto>> Posts { get; set; }
 
-        public async Task OnGetAsync(string category)
+        public async Task OnGetAsync(string tag)
         {
-            Posts = await GetResultAsync<BlogResponse<List<GetPostDto>>>($"api/meowv/blog/posts/category/{category}");
+            Posts = await GetResultAsync<BlogResponse<List<GetPostDto>>>($"api/meowv/blog/posts/tag/{tag}");
         }
     }
 }

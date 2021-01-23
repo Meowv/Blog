@@ -1,13 +1,13 @@
-﻿@page "/category/{category}"
-@model Meowv.Blog.Web.Pages.Posts.CategoryModel
+﻿@page "/tag/{tag}"
+@model Meowv.Blog.Web.Pages.Posts.TagModel
 @{
     var response = Model.Posts;
 
-    var category = response.Message;
+    var tag = response.Message;
     var posts = response.Result;
 }
 <div class="post-wrap tags">
-    <h2 class="post-title">-&nbsp;Category&nbsp;·&nbsp;@category&nbsp;-</h2>
+    <h2 class="post-title">-&nbsp;Tag&nbsp;·&nbsp;@tag&nbsp;-</h2>
 </div>
 <div class="post-wrap archive">
     @foreach (var item in posts)
