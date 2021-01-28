@@ -1,33 +1,32 @@
 ﻿using AntDesign;
-using Meowv.Blog.Admin.Services;
-using Meowv.Blog.Dto.Blog;
+using Meowv.Blog.Dto.Signatures;
 using Meowv.Blog.Response;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Meowv.Blog.Admin.Pages.Posts
+namespace Meowv.Blog.Admin.Pages.Signatures
 {
-    public partial class PostList
+    public partial class SignatureList
     {
         int page = 1;
         int limit = 10;
         int total = 0;
-        IReadOnlyList<GetAdminPostDto> posts;
+        IReadOnlyList<SignatureDto> signatures;
 
         protected override async Task OnInitializedAsync()
         {
-            posts = await GetPostListAsync(page, limit);
+            signatures = await GetSignatureListAsync(page, limit);
         }
 
         public async Task HandlePageIndexChange(PaginationEventArgs args)
         {
-            posts = await GetPostListAsync(page, limit);
+            signatures = await GetSignatureListAsync(page, limit);
         }
 
-        public async Task<IReadOnlyList<GetAdminPostDto>> GetPostListAsync(int page, int limit)
+        public async Task<IReadOnlyList<SignatureDto>> GetSignatureListAsync(int page, int limit)
         {
-            var response = await GetResultAsync<BlogResponse<PagedList<GetAdminPostDto>>>($"api/meowv/blog/admin/posts/{page}/{limit}");
+            var response = await GetResultAsync<BlogResponse<PagedList<SignatureDto>>>($"api/meowv/signatures/{page}/{limit}");
 
             total = response.Result.Total;
 
@@ -36,11 +35,11 @@ namespace Meowv.Blog.Admin.Pages.Posts
 
         public async Task DeleteAsync(string id)
         {
-            var response = await GetResultAsync<BlogResponse>($"api/meowv/blog/post/{id}", method: HttpMethod.Delete);
+            var response = await GetResultAsync<BlogResponse>($"api/meowv/signature/{id}", method: HttpMethod.Delete);
             if (response.Success)
             {
                 await Message.Success("删除成功", 0.5);
-                posts = await GetPostListAsync(page, limit);
+                signatures = await GetSignatureListAsync(page, limit);
             }
             else
             {
