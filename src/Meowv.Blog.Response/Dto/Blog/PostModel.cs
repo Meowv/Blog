@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Meowv.Blog.Dto.Blog
 {
-    public class PostDto
+    public class PostModel
     {
         public string Title { get; set; }
 
@@ -12,10 +13,10 @@ namespace Meowv.Blog.Dto.Blog
 
         public string Markdown { get; set; }
 
-        public CategoryAdminDto Category { get; set; }
+        public string Category { get; set; }
 
-        public List<TagAdminDto> Tags { get; set; }
+        public List<string> Tag { get; set; }
 
-        public string CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }
